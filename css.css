@@ -1,0 +1,105 @@
+.sidebar {
+  background-color: rgb(240, 239, 240);
+  height: 100%;   
+  width: 160px;
+  position: fixed;
+  top: 5vh;
+  left: 0;
+  overflow-x: hidden;
+  padding-top: 2vh;
+  }
+
+.menu{
+  text-decoration:underline;b  
+}
+.menuContainer button, .projectContainer button, .menu {
+  color:rgb(214, 47, 47);
+  font-weight:600;
+  font-family:cursive;
+  font-size: 29px;
+  background-color: rgb(0, 0, 0);
+  padding: 6px 8px 6px 16px;
+
+  display: block;
+  border: none;
+  background: none;
+  width:100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+
+  }
+
+.menuContainer{
+  display: none;
+  background-color:rgb(240, 240, 240);
+  padding-left: 2vw;
+  color:red;
+}
+
+.menuContainer button {
+  color:red;
+  font-size: 22px;
+  padding: 6px 8px 6px 16px;
+}
+
+.projectContainer {
+  display: none;
+  background-color:rgb(240, 240, 240);
+  padding-left: 1vw;
+  color:red;
+}
+
+.projectContainer button{
+  color:blue;
+  padding: 6px 8px 6px 16px;
+  font-size: 26px;
+}
+
+
+.menuContainer button:hover {
+  text-decoration: underline;
+}
+
+/* .navbar {
+  background-color:rgb(240, 240, 240);
+  height:5vh;
+  width:100vw;
+  top:0%;
+  left:0%;
+  position:fixed;
+}
+
+.addtask{
+ color:rgb(0, 0, 0);
+ display:block;
+ font-size: 22px;
+ position: absolute;
+ left:75vw;
+ border:none;
+ font-weight: bolder;
+ background-color: rgb(240, 240, 240);
+ padding: 1px 0px 0px 0px;
+}
+
+.projectpop-up {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* .pop-upContent {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+} 
+*/ */

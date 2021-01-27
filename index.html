@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script defer src=main.js ></script>
+  <link rel="stylesheet"  href="css.css"> 
+  <link rel="stylesheet"  href="css2.css"> 
+</head>
+<body>
+
+  <!--navbar-->
+  <div class="navbar"></div>
+    <button id="projectBtn" class="addtask"> + Project</button>
+    <!--pop up deployed when pressing the button above-->
+    <div id="pop-up" class="projectpop-up">
+      <!-- Pop-up content -->
+      <div class="pop-upContent">
+        <span class="close">&times;</span>
+        <p class="taskname">Task Name</p>
+        <input>
+        <p class="description">Description</p>
+        <input class="descriptioninput">
+        <label class="date" for="date">Date:</label>
+        <input type="date" id="date" class="dateinput" name="date"> 
+        <p>Notes</p>
+        <input class="notesinput">
+        <div class="arrow-left"></div>
+        <div class="arrow-left1"></div>
+        <div class="arrow-left2"></div>
+        <input type="checkbox" class="checkbox">
+        <input type="checkbox" class="checkbox1">
+        <input type="checkbox" class="checkbox2">
+        <label class="priority"> Priority</label>
+      </div>
+    </div>
+
+
+<!--sidebar-->
+  <div class="sidebar">
+    <button class="menu">Today
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="menuContainer">
+      <button>-Task 1</button>
+      <button>-Task 2</button>
+      <button>-Task 3</button>
+    </div>
+    <button class="menu">Weekend</button>
+    <button class="menu">Projects</button>
+    <div class="projectContainer">
+      <button>Project 1</button>
+      <button>Project 2</button>
+      <button>Project 3</button>
+    </div>
+  </div> 
+  
+ 
+</body>
+</html>
+
