@@ -8,6 +8,43 @@ popupProject ();
 
 let allTasks = [];
 
+let x = JSON.parse(localStorage.getItem(0))
+console.log (x);
+
+
+
+for(var i in localStorage)
+{
+    console.log(localStorage[i]);
+}
+
+//test for firefox 3.6 see if it works
+//with this way of iterating it
+for(var i=0, len=localStorage.length; i<len; i++) {
+    var key = localStorage.key(i);
+    var value = localStorage[key];
+    console.log(key + " => " + value);
+    x = JSON.parse(value);
+    console.log (x);
+    const container = document.getElementById ("taskContainer");
+    const newtask = document.createElement ('div');
+    newtask.classList.add ("task");
+    //checkbox
+    const taskcheckbox = document.createElement ('input');
+    taskcheckbox.type = "checkbox";
+    //task title
+
+    // console.log (allTasks[task].title)
+    const tasktitle = document.createElement ('p');
+    tasktitle.textContent = x.title;
+    //task description
+    const flag = document.createElement ('div');
+    flag.classList.add ("arrowyellow");
+    newtask.appendChild (taskcheckbox);
+    newtask.appendChild (tasktitle);
+    newtask.appendChild (flag);
+    container.appendChild (newtask);
+}
 
 function Task (title, description, notes) {
   this.title = title;
@@ -26,11 +63,11 @@ const addTasktotheProject = function (newTask) {
   // const checkbox = document.getElementById("checkbox").value;
   newTask = new Task(title, description, notes);
   allTasks.push(newTask);
-  console.log (newTask);
-  console.log (allTasks);
+  localStorage.setItem (i, JSON.stringify(newTask))
+  i++
 }
 
-addTasktotheProject ();
+
 
 const addtaskbtn = document.getElementById ("addtaskbutton")
 addtaskbtn.addEventListener ('click', ()=>{
@@ -63,7 +100,7 @@ today.addEventListener ('click', () => {
 });
 
 function displayalltasks () {
-console.log (allTasks)
+
 let task = 0;
 for (task in allTasks) {
   const container = document.getElementById ("taskContainer");
